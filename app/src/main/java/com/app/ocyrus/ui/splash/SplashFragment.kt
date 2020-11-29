@@ -53,11 +53,6 @@ class SplashFragment : BaseFragment<Nothing, Nothing> {
         get() = R.layout.fragment_splash
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        //        viewModel.setNavigator(this);
-
-    }
     @SuppressLint("ValidFragment")
     constructor(fromNotification: Boolean) {
         // Required empty public constructor

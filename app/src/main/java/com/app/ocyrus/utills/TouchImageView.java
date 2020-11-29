@@ -73,7 +73,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     /**
      * The enum State.
      */
-    private static enum State {
+    private enum State {
         /**
          * None state.
          */
@@ -93,7 +93,8 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         /**
          * Animate zoom state.
          */
-        ANIMATE_ZOOM };
+        ANIMATE_ZOOM }
+
     /**
      * The State.
      */
@@ -988,11 +989,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         } else if (x >= -1 && direction < 0) {
             return false;
 
-        } else if (Math.abs(x) + viewWidth + 1 >= getImageWidth() && direction > 0) {
-            return false;
-        }
-
-        return true;
+        } else return !(Math.abs(x) + viewWidth + 1 >= getImageWidth()) || direction <= 0;
     }
 
     /**
@@ -1096,7 +1093,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         /**
          * On move.
          */
-        public void onMove();
+        void onMove();
     }
 
     /**
@@ -1113,7 +1110,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
 //
         // Remember last point position for dragging
         //
-        private PointF last = new PointF();
+        private final PointF last = new PointF();
 
         /**
          * On touch boolean.
@@ -1288,7 +1285,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         /**
          * The Start time.
          */
-        private long startTime;
+        private final long startTime;
         /**
          * The constant ZOOM_TIME.
          */
@@ -1296,33 +1293,35 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         /**
          * The Start zoom.
          */
-        private float startZoom, /**
+        private final float startZoom;
+        private final float /**
          * The Target zoom.
          */
         targetZoom;
         /**
          * The Bitmap x.
          */
-        private float bitmapX, /**
+        private final float bitmapX;
+        private final float /**
          * The Bitmap y.
          */
         bitmapY;
         /**
          * The Stretch image to super.
          */
-        private boolean stretchImageToSuper;
+        private final boolean stretchImageToSuper;
         /**
          * The Interpolator.
          */
-        private AccelerateDecelerateInterpolator interpolator = new AccelerateDecelerateInterpolator();
+        private final AccelerateDecelerateInterpolator interpolator = new AccelerateDecelerateInterpolator();
         /**
          * The Start touch.
          */
-        private PointF startTouch;
+        private final PointF startTouch;
         /**
          * The End touch.
          */
-        private PointF endTouch;
+        private final PointF endTouch;
 
         /**
          * Instantiates a new Double tap zoom.

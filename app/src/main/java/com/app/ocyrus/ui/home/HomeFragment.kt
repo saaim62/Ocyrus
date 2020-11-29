@@ -95,11 +95,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeFragmentViewModel>, B
         binding.tvTotalEarn.text = String.format("%.3f",  myPrice.toDouble())
     }
 
-    public fun getP2PisOn (): Boolean{
+    fun getP2PisOn (): Boolean{
 
         return tvOn.isChecked
     }
-    public fun showOnlyP2p (){
+    fun showOnlyP2p (){
 
        binding.topView.visibility = View.GONE
 
