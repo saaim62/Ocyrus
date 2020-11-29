@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <RelativeLayout
         android:id="@+id/header_view"
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/imgBack"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
-             />
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:padding="5dp"
-            android:src="@drawable/abc_vector_test" />
+            android:src="@drawable/abc_vector_test"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
     <View
         android:id="@+id/view_sep"
-        android:layout_below="@+id/header_view"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/grey_light"/>
+        android:layout_below="@+id/header_view"
+        android:background="@color/grey_light" />
 
-    <com.meetingrooms.app.utills.TouchImageView
+    <com.app.ocyrus.utills.TouchImageView
         android:id="@+id/img"
-        android:layout_below="@+id/view_sep"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_below="@+id/view_sep" />
 
 </RelativeLayout>
