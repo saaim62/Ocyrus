@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.app.ocyruss.utills.DashbordResponse;
+import com.app.ocyrus.utills.DashbordResponse;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;

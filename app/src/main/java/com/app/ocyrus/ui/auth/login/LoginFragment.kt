@@ -1,4 +1,4 @@
-package com.app.ocyruss.auth.login
+package com.app.ocyrus.auth.login
 
 
 import android.annotation.SuppressLint
@@ -18,12 +18,12 @@ import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentLoginBinding
 import com.app.ocyrus.utills.AppManager
 import com.app.ocyrus.utills.SharedPref
-import com.app.ocyruss.auth.signup.SignupFragment
-import com.app.ocyruss.base.BaseActivity
-import com.app.ocyruss.base.BaseFragment
-import com.app.ocyruss.base.BaseNavigator
-import com.app.ocyruss.base.BaseResponse
-import com.app.ocyruss.utills.User
+import com.app.ocyrus.auth.signup.SignupFragment
+import com.app.ocyrus.base.BaseActivity
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.base.BaseResponse
+import com.app.ocyrus.utills.User
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import java.util.*
 

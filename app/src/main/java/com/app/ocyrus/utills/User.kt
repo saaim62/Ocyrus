@@ -1,4 +1,4 @@
-package com.app.ocyruss.utills
+package com.app.ocyrus.utills
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Observable

@@ -1,4 +1,4 @@
-package com.app.ocyruss.auth.signup
+package com.app.ocyrus.auth.signup
 
 /**
  * The interface Signup navigator.

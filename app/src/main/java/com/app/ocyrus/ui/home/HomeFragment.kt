@@ -10,10 +10,10 @@ import androidx.lifecycle.ViewModelProviders
 import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentHomeBinding
 import com.app.ocyrus.utills.AppManager
-import com.app.ocyruss.base.BaseActivity
-import com.app.ocyruss.base.BaseFragment
-import com.app.ocyruss.base.BaseNavigator
-import com.app.ocyruss.base.BaseResponse
+import com.app.ocyrus.base.BaseActivity
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.base.BaseResponse
 import kotlinx.android.synthetic.main.fragment_home.*
 
 

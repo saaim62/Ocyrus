@@ -1,4 +1,4 @@
-package com.app.ocyruss
+package com.app.ocyrus
 
 import android.app.Application
 import com.app.ocyrus.utills.AppManager

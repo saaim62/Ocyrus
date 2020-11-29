@@ -3,10 +3,10 @@ package com.app.ocyrus
 
 import android.app.Application
 import com.app.ocyrus.network.ServiceCallBack
-import com.app.ocyruss.base.BaseNavigator
-import com.app.ocyruss.base.BaseResponse
-import com.app.ocyruss.base.BaseViewModel
-import com.app.ocyruss.network.RemoteDataSource
+import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.base.BaseResponse
+import com.app.ocyrus.base.BaseViewModel
+import com.app.ocyrus.network.RemoteDataSource
 import retrofit2.Response
 
 

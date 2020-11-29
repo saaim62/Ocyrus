@@ -1,4 +1,4 @@
-package com.app.ocyruss.base
+package com.app.ocyrus.base
 
 /**
  * The interface Change password navigator.

@@ -1,10 +1,10 @@
-package com.app.ocyruss.network;
+package com.app.ocyrus.network;
 
 import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.network.ServiceCallBack
-import com.app.ocyruss.base.BaseResponse
-import com.app.ocyruss.network.data.remote.DataSource
-import com.app.ocyruss.utills.*
+import com.app.ocyrus.base.BaseResponse
+import com.app.ocyrus.network.data.remote.DataSource
+import com.app.ocyrus.utills.*
 import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody

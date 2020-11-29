@@ -1,6 +1,6 @@
 package com.app.ocyrus.network;
 
-import com.app.ocyruss.base.BaseResponse;
+import com.app.ocyrus.base.BaseResponse;
 
 import retrofit2.Response;
 

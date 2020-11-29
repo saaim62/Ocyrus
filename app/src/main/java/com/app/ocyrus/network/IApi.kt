@@ -1,10 +1,10 @@
-package com.app.ocyruss.network
+package com.app.ocyrus.network
 
-import com.app.ocyruss.utills.User
-import com.app.ocyruss.base.BaseResponse
-import com.app.ocyruss.utills.DashbordResponse
-import com.app.ocyruss.utills.StaticHtmlPages
-import com.app.ocyruss.utills.UpdateDashbordResponse
+import com.app.ocyrus.utills.User
+import com.app.ocyrus.base.BaseResponse
+import com.app.ocyrus.utills.DashbordResponse
+import com.app.ocyrus.utills.StaticHtmlPages
+import com.app.ocyrus.utills.UpdateDashbordResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

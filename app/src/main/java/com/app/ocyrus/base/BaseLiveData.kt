@@ -1,4 +1,4 @@
-package com.app.ocyruss.base
+package com.app.ocyrus.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer

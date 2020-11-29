@@ -23,8 +23,8 @@ import com.app.ocyrus.databinding.ActivityPictureBinding
 import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.utills.AppManager
 import com.app.ocyrus.utills.Util
-import com.app.ocyruss.base.BaseActivity
-import com.app.ocyruss.utills.DashbordResponse
+import com.app.ocyrus.base.BaseActivity
+import com.app.ocyrus.utills.DashbordResponse
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import java.lang.Float.parseFloat

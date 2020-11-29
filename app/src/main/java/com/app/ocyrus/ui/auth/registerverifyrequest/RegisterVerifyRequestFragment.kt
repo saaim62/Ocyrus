@@ -1,4 +1,4 @@
-package com.app.ocyruss.auth.login
+package com.app.ocyrus.auth.login
 
 
 import android.annotation.SuppressLint
@@ -10,9 +10,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentRegiseterRequestVerifyBinding
-import com.app.ocyruss.app.auth.login.RegisterVerifyRequestViewModel
-import com.app.ocyruss.base.BaseFragment
-import com.app.ocyruss.base.BaseNavigator
+import com.app.ocyrus.app.auth.login.RegisterVerifyRequestViewModel
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
 
 /**
  * The type RegisterVerifyRequestFragment fragment.

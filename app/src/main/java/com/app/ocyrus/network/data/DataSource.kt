@@ -1,4 +1,4 @@
-package com.app.ocyruss.network.data.remote
+package com.app.ocyrus.network.data.remote
 
 import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.network.ServiceCallBack

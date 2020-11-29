@@ -19,8 +19,8 @@ import com.app.ocyrus.databinding.ActivityAuthBinding
 import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.ui.home.HomeFragment
 import com.app.ocyrus.ui.splash.SplashFragment
-import com.app.ocyruss.base.BaseActivity
-import com.app.ocyruss.base.BaseFragment
+import com.app.ocyrus.base.BaseActivity
+import com.app.ocyrus.base.BaseFragment
 import java.util.logging.Logger
 
 class AuthActivity : BaseActivity<ActivityAuthBinding, AuthActivityViewModel>() {

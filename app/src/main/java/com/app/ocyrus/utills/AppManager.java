@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import com.app.ocyrus.AppConstants;
 import com.app.ocyrus.AuthActivity;
 import com.google.gson.Gson;
-import com.app.ocyruss.utills.User;
+import com.app.ocyrus.utills.User;
 
 /**
  * The type App manager.

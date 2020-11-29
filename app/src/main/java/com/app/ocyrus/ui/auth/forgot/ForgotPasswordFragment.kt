@@ -11,9 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.app.ocyrus.AppConstants
 import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentForgotPassordBinding
-import com.app.ocyruss.base.BaseFragment
-import com.app.ocyruss.base.BaseNavigator
-import com.app.ocyruss.base.BaseResponse
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.base.BaseResponse
 import java.util.HashMap
 
 /**

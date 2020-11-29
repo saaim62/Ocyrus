@@ -1,4 +1,4 @@
-package com.app.ocyruss.auth.signup
+package com.app.ocyrus.auth.signup
 
 import android.Manifest
 import android.content.DialogInterface
@@ -20,9 +20,9 @@ import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentSignupBinding
 import com.app.ocyrus.utills.FileUtils
 import com.app.ocyrus.utills.Util
-import com.app.ocyruss.base.BaseActivity
-import com.app.ocyruss.base.BaseFragment
-import com.app.ocyruss.base.BaseNavigator
+import com.app.ocyrus.base.BaseActivity
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 

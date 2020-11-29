@@ -12,8 +12,8 @@ import com.app.ocyrus.utills.SharedPref;
 import com.app.ocyrus.utills.Util;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.app.ocyruss.base.BaseResponse;
-import com.app.ocyruss.network.IApi;
+import com.app.ocyrus.base.BaseResponse;
+import com.app.ocyrus.network.IApi;
 
 import java.io.IOException;
 

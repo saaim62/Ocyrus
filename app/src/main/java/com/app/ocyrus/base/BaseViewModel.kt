@@ -14,7 +14,7 @@
  *  limitations under the License
  */
 
-package com.app.ocyruss.base
+package com.app.ocyrus.base
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

@@ -1,6 +1,6 @@
 
 
-package com.app.ocyruss.base
+package com.app.ocyrus.base
 
 import android.app.AlertDialog
 import android.content.Context

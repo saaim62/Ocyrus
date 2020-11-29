@@ -1,4 +1,4 @@
-package com.app.ocyruss.auth.signup
+package com.app.ocyrus.auth.signup
 
 import android.app.Application
 import androidx.annotation.NonNull
@@ -6,12 +6,12 @@ import androidx.lifecycle.MutableLiveData
 import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.network.ServiceCallBack
 import com.app.ocyrus.utills.Util
-import com.app.ocyruss.base.BaseNavigator
-import com.app.ocyruss.base.BaseResponse
-import com.app.ocyruss.base.BaseViewModel
-import com.app.ocyruss.network.IApi
-import com.app.ocyruss.network.RemoteDataSource
-import com.app.ocyruss.utills.User
+import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.base.BaseResponse
+import com.app.ocyrus.base.BaseViewModel
+import com.app.ocyrus.network.IApi
+import com.app.ocyrus.network.RemoteDataSource
+import com.app.ocyrus.utills.User
 
 
 import retrofit2.Response

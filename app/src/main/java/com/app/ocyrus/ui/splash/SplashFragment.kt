@@ -17,8 +17,8 @@ import com.app.ocyrus.P2PActivity
 import com.app.ocyrus.R
 import com.app.ocyrus.databinding.FragmentSplashBinding
 import com.app.ocyrus.utills.AppManager
-import com.app.ocyruss.auth.login.LoginFragment
-import com.app.ocyruss.base.BaseFragment
+import com.app.ocyrus.auth.login.LoginFragment
+import com.app.ocyrus.base.BaseFragment
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.text.DateFormat
