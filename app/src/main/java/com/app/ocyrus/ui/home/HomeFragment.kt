@@ -36,13 +36,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeFragmentViewModel>, B
     private var completeTillnow : Float = 13f
     private var oneAdPrice : Float = 0.45f
 
-
     override val layoutId: Int
         get() {
             return R.layout.fragment_home
         }
-
-
 
     @SuppressLint("ValidFragment")
     constructor(fromLogout: Boolean) {
@@ -117,6 +114,4 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeFragmentViewModel>, B
     override fun handleError(message: String?, tag: Int, code: Int?) {
         showErrorBar(context, message)
     }
-
-
 }

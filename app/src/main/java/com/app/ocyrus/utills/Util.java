@@ -69,6 +69,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -100,7 +101,7 @@ public class Util {
     /**
      * The constant IMAGE_MAX_SIZE.
      */
-    private static int IMAGE_MAX_SIZE = 1024;
+    private static final int IMAGE_MAX_SIZE = 1024;
     /**
      * The Pattern.
      */
@@ -152,11 +153,7 @@ public class Util {
         PackageManager packageManager = context.getPackageManager();
         Intent testIntent = new Intent(Intent.ACTION_VIEW);
         testIntent.setType(MIME_TYPE_PDF);
-        if (packageManager.queryIntentActivities(testIntent, PackageManager.MATCH_DEFAULT_ONLY).size() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return packageManager.queryIntentActivities(testIntent, PackageManager.MATCH_DEFAULT_ONLY).size() > 0;
     }
 
     /**
@@ -338,10 +335,8 @@ public class Util {
      */
     public static boolean isPhoneLocked(Context context) {
         KeyguardManager myKM = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
-        if (myKM.inKeyguardRestrictedInputMode())
-            return true; // it is locked
-        else
-            return false; //it is not locked
+        //it is not locked
+        return myKM.inKeyguardRestrictedInputMode(); // it is locked
     }
 
     /**
@@ -829,11 +824,7 @@ public class Util {
         boolean b = false;
 
         try {
-            if (dfDate.parse(startDate).equals(dfDate.parse(endDate))) {
-                b = true;  // If two dates are equal.
-            } else {
-                b = false;
-            }
+            b = dfDate.parse(startDate).equals(dfDate.parse(endDate));  // If two dates are equal.
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -1422,7 +1413,7 @@ public class Util {
         String text = "";
         try {
             byte[] data = Base64.decode(textEncoded, Base64.DEFAULT);
-            text = new String(data, "UTF-8");
+            text = new String(data, StandardCharsets.UTF_8);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -1438,7 +1429,7 @@ public class Util {
     public static String dataEncode(String textDecode) {
         String base64 = "";
         try {
-            byte[] data = textDecode.getBytes("UTF-8");
+            byte[] data = textDecode.getBytes(StandardCharsets.UTF_8);
             base64 = Base64.encodeToString(data, Base64.DEFAULT);
 
         } catch (Exception ex) {

@@ -75,10 +75,6 @@ class SplashFragment : BaseFragment<Nothing, Nothing> {
     }
 
 
-
-
-
-
     /**
      * Start splash.
      */
@@ -176,7 +172,7 @@ class SplashFragment : BaseFragment<Nothing, Nothing> {
     }
 
     private fun getDeviceDensity(): String? {
-        val density: Int = activity!!.getResources().getDisplayMetrics().densityDpi
+        val density: Int = activity!!.resources.displayMetrics.densityDpi
         return when (density) {
             DisplayMetrics.DENSITY_MEDIUM -> "MDPI"
             DisplayMetrics.DENSITY_HIGH -> "HDPI"

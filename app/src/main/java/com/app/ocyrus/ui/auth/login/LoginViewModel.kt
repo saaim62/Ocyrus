@@ -90,65 +90,60 @@ class LoginViewModel
             if (apiTag == IApi.TAG_LOGIN) {
                 val response = baseResponse.body()
 
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
                         Log.d("responseSuccess",response.toString())
 
-                        loginLiveData!!.setValue(response as BaseResponse<User>?)
+                        loginLiveData!!.value = response as BaseResponse<User>?
 
-                        getNavigator()?.handleError(response.message, apiTag, response!!.code)
+                        getNavigator()?.handleError(response.message, apiTag, response.code)
 
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
 
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
-
             }
 
             else if (apiTag == IApi.TAG_FORGOT_PASSWORD) {
                 val response = baseResponse.body()
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
-                        forgotLiveData!!.setValue(response as BaseResponse<Void>?)
+                        forgotLiveData!!.value = response as BaseResponse<Void>?
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
-
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
-
             }
             else if (apiTag == IApi.TAG_VERIFY_OTP) {
                 val response = baseResponse.body()
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
-                        verifyLiveData!!.setValue(response as BaseResponse<Void>?)
+                        verifyLiveData!!.value = response as BaseResponse<Void>?
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
-
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
 
             }
             else if (apiTag == IApi.TAG_RESET_PASSWORD) {
                 val response = baseResponse.body()
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
-                        resetLiveData!!.setValue(response as BaseResponse<Void>?)
+                        resetLiveData!!.value = response as BaseResponse<Void>?
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
 
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
-
             }
         } catch (e: Exception) {
         }

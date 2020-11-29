@@ -46,7 +46,7 @@ class ForgotPasswordFragment : BaseFragment<FragmentForgotPassordBinding, Forgot
                 return false
             }
             if (!isEmailValid(getString(binding.edtEmail))) {
-                showErrorBar(getContext(), AppConstants.ERROR_INVALID_EMAIL, binding.edtEmail)
+                showErrorBar(context, AppConstants.ERROR_INVALID_EMAIL, binding.edtEmail)
                 binding.edtEmail.requestFocus()
                 return false
             }

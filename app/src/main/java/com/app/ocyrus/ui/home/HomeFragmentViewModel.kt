@@ -3,19 +3,15 @@ package com.app.ocyrus.ui.home
 import android.app.Application
 import androidx.annotation.NonNull
 import androidx.lifecycle.MutableLiveData
-import com.app.ocyrus.network.NetworkCall
-import com.app.ocyrus.network.ServiceCallBack
 import com.app.ocyrus.base.BaseNavigator
 import com.app.ocyrus.base.BaseResponse
 import com.app.ocyrus.base.BaseViewModel
 import com.app.ocyrus.network.IApi
+import com.app.ocyrus.network.NetworkCall
 import com.app.ocyrus.network.RemoteDataSource
-import com.app.ocyrus.utills.User
-
-
-import java.util.HashMap
-
+import com.app.ocyrus.network.ServiceCallBack
 import retrofit2.Response
+import java.util.*
 
 
 /**
@@ -27,7 +23,8 @@ class HomeFragmentViewModel
  *
  * @param application the application
  */
-(@NonNull application: Application) : BaseViewModel<BaseNavigator>(application), ServiceCallBack {
+    (@NonNull application: Application) : BaseViewModel<BaseNavigator>(application),
+    ServiceCallBack {
 
 
     /**
@@ -41,8 +38,10 @@ class HomeFragmentViewModel
     private var homeLiveData: MutableLiveData<BaseResponse<Void>>? = null
 
 
-
-    fun getLoginLiveData(networkCall: NetworkCall, param: HashMap<String,String>): MutableLiveData<BaseResponse<Void>> {
+    fun getLoginLiveData(
+        networkCall: NetworkCall,
+        param: HashMap<String, String>
+    ): MutableLiveData<BaseResponse<Void>> {
         if (homeLiveData == null) {
             homeLiveData = MutableLiveData()
         }
@@ -51,27 +50,22 @@ class HomeFragmentViewModel
         return homeLiveData as MutableLiveData<BaseResponse<Void>>
     }
 
-
     override fun onSuccess(apiTag: Int, baseResponse: Response<BaseResponse<*>>) {
         try {
             if (apiTag == IApi.TAG_LOGIN) {
                 val response = baseResponse.body()
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
-                        homeLiveData!!.setValue(response as BaseResponse<Void>?)
+                        homeLiveData!!.value = response as BaseResponse<Void>?
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
-
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
-
             }
         } catch (e: Exception) {
         }
-
-
     }
 
 
@@ -88,5 +82,4 @@ class HomeFragmentViewModel
         }
 
     }
-
 }

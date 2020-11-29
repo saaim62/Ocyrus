@@ -56,15 +56,15 @@ class ForgotPassViewModel
         try {
             if (apiTag == IApi.TAG_FORGOT_PASSWORD) {
                 val response = baseResponse.body()
-                if (response != null && response!!.status) {
+                if (response != null && response.status) {
                     try {
-                        forgotLiveData!!.setValue(response as BaseResponse<Void>?)
+                        forgotLiveData!!.value = response as BaseResponse<Void>?
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
 
                 } else {
-                    getNavigator()?.handleError(response!!.message, apiTag, response!!.code)
+                    getNavigator()?.handleError(response!!.message, apiTag, response.code)
                 }
 
             }

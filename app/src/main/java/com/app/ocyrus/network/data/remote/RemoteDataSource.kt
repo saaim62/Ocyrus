@@ -1,18 +1,16 @@
-package com.app.ocyrus.network;
+package com.app.ocyrus.network
 
-import com.app.ocyrus.network.NetworkCall
-import com.app.ocyrus.network.ServiceCallBack
 import com.app.ocyrus.base.BaseResponse
 import com.app.ocyrus.network.data.remote.DataSource
-import com.app.ocyrus.utills.*
-import okhttp3.MediaType
+import com.app.ocyrus.utills.DashbordResponse
+import com.app.ocyrus.utills.StaticHtmlPages
+import com.app.ocyrus.utills.UpdateDashbordResponse
+import com.app.ocyrus.utills.User
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONObject
-import retrofit2.http.FieldMap
 import java.io.File
 
 class RemoteDataSource : DataSource {
@@ -57,7 +55,8 @@ class RemoteDataSource : DataSource {
             networkCall.serviceCallBack = serviceCallBack
             networkCall.requestTag = IApi.TAG_LOGIN
 
-            val responceCall = if (title=="TMC") networkCall.getRetrofit(showLoading)!!.getTmc() else networkCall.getRetrofit(showLoading)!!.getPrivacy()
+            val responceCall = if (title == "TMC") networkCall.getRetrofit(showLoading)!!
+                .getTmc() else networkCall.getRetrofit(showLoading)!!.getPrivacy()
 
 
             responceCall.enqueue(networkCall.requestCallback() as retrofit2.Callback<BaseResponse<StaticHtmlPages>>)
@@ -83,7 +82,6 @@ class RemoteDataSource : DataSource {
             e.printStackTrace()
         }
     }
-
 
 
     override fun forgotPassword(
@@ -161,6 +159,7 @@ class RemoteDataSource : DataSource {
             e.printStackTrace()
         }
     }
+
     override fun dashbordData(
         serviceCallBack: ServiceCallBack,
         networkCall: NetworkCall,
@@ -211,41 +210,37 @@ class RemoteDataSource : DataSource {
         showLoading: Boolean
     ) {
         try {
-           val role_id : RequestBody? =
-               role_id.
-               toRequestBody("multipart/form-data".toMediaTypeOrNull())
-            val first_name : RequestBody? =
-                first_name.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
-            val last_name : RequestBody? =
-                last_name.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val role_id: RequestBody? =
+                role_id.toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val first_name: RequestBody? =
+                first_name.toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val last_name: RequestBody? =
+                last_name.toRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-            val email : RequestBody? =
-                email.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val email: RequestBody? =
+                email.toRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-            val mobile : RequestBody? =
-                mobile.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
-            val password : RequestBody? =
-                password.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val mobile: RequestBody? =
+                mobile.toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val password: RequestBody? =
+                password.toRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-            val device_id : RequestBody? =
-                device_id.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val device_id: RequestBody? =
+                device_id.toRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-            val device_typ : RequestBody? =
-                device_type.
-                toRequestBody("multipart/form-data".toMediaTypeOrNull())
+            val device_typ: RequestBody? =
+                device_type.toRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-           var profile_photo_file_Body: MultipartBody.Part? = null
+            var profile_photo_file_Body: MultipartBody.Part? = null
 
-            if(profile_photo_file!= null){
+            if (profile_photo_file != null) {
                 val requestImageFile =
                     profile_photo_file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-                profile_photo_file_Body = MultipartBody.Part.createFormData("profile_photo", profile_photo_file.name, requestImageFile)
+                profile_photo_file_Body = MultipartBody.Part.createFormData(
+                    "profile_photo",
+                    profile_photo_file.name,
+                    requestImageFile
+                )
 
             }
 
@@ -264,7 +259,7 @@ class RemoteDataSource : DataSource {
                 device_id!!,
                 device_typ!!,
                 profile_photo_file_Body
-                )
+            )
             responceCall.enqueue(networkCall.requestCallback() as retrofit2.Callback<BaseResponse<Void>>)
         } catch (e: Exception) {
             e.printStackTrace()

@@ -123,7 +123,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
         val view = this.currentFocus
         if (view != null) {
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm?.hideSoftInputFromWindow(view.windowToken, 0)
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
 
@@ -391,9 +391,9 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
 //            supportFragmentManager.popBackStackImmediate()
 //        }
 
-        if(fm.getBackStackEntryCount()>0){
-            var name = getSupportFragmentManager().getBackStackEntryAt(0).getName();
-            getSupportFragmentManager().popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        if(fm.backStackEntryCount >0){
+            var name = supportFragmentManager.getBackStackEntryAt(0).name
+            supportFragmentManager.popBackStack(name, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
     }
 

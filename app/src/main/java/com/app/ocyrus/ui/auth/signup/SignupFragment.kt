@@ -1,12 +1,9 @@
 package com.app.ocyrus.auth.signup
 
-import android.Manifest
 import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.text.TextUtils
 import android.text.method.PasswordTransformationMethod
 import android.view.View
 import androidx.annotation.NonNull
@@ -17,15 +14,13 @@ import com.app.ocyrus.AppConstants
 import com.app.ocyrus.ImagePickerActivity
 import com.app.ocyrus.ImagePickerActivity.PickerOptionListener
 import com.app.ocyrus.R
+import com.app.ocyrus.base.BaseFragment
+import com.app.ocyrus.base.BaseNavigator
 import com.app.ocyrus.databinding.FragmentSignupBinding
 import com.app.ocyrus.utills.FileUtils
 import com.app.ocyrus.utills.Util
-import com.app.ocyrus.base.BaseActivity
-import com.app.ocyrus.base.BaseFragment
-import com.app.ocyrus.base.BaseNavigator
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-
 import java.io.File
 
 
@@ -55,40 +50,40 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
 //            }
 
             if (isEmpty(getString(binding.edtFname))) {
-                showErrorBar(getContext(), AppConstants.ERROR_ENTER_VALID_FNAME, binding.edtFname)
+                showErrorBar(context, AppConstants.ERROR_ENTER_VALID_FNAME, binding.edtFname)
                 binding.edtFname.requestFocus()
                 return false
             }
-             if (isEmpty(getString(binding.edtLName))) {
-                showErrorBar(getContext(), AppConstants.ERROR_ENTER_VALID_LNAME, binding.edtLName)
+            if (isEmpty(getString(binding.edtLName))) {
+                showErrorBar(context, AppConstants.ERROR_ENTER_VALID_LNAME, binding.edtLName)
                 binding.edtLName.requestFocus()
                 return false
             }
 
             if (!isEmailValid(getString(binding.edtEmail))) {
-                showErrorBar(getContext(), AppConstants.ERROR_INVALID_EMAIL, binding.edtEmail)
+                showErrorBar(context, AppConstants.ERROR_INVALID_EMAIL, binding.edtEmail)
                 binding.edtEmail.requestFocus()
                 return false
             }
 
             if (isEmpty(getString(binding.edtPhone))) {
-                showErrorBar(getContext(), AppConstants.ERROR_ENTER_VALID_MOBILE, binding.edtPhone)
+                showErrorBar(context, AppConstants.ERROR_ENTER_VALID_MOBILE, binding.edtPhone)
                 binding.edtPhone.requestFocus()
                 return false
             }
             if (getString(binding.edtPhone).length < 10) {
-                showErrorBar(getContext(), AppConstants.ERROR_ENTER_VALID_PHONE_NUMBER, binding.edtPhone)
+                showErrorBar(context, AppConstants.ERROR_ENTER_VALID_PHONE_NUMBER, binding.edtPhone)
                 binding.edtPhone.requestFocus()
                 return false
             }
             if (isEmpty(getString(binding.edtPassword))) {
-                showErrorBar(getContext(), AppConstants.ERROR_ENTER_PASSWORD, binding.edtPassword)
+                showErrorBar(context, AppConstants.ERROR_ENTER_PASSWORD, binding.edtPassword)
                 binding.edtPassword.requestFocus()
                 return false
             }
 
             if (getString(binding.edtPassword).length < 5) {
-                showErrorBar(getContext(), AppConstants.ERROR_PASSWORD_LENGTH, binding.edtPassword)
+                showErrorBar(context, AppConstants.ERROR_PASSWORD_LENGTH, binding.edtPassword)
                 binding.edtPassword.requestFocus()
                 return false
             }
@@ -150,45 +145,47 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
 
 
         // binding.tvPP.setOnClickListener { view -> goToPrivacyPolicy() }
-       // binding.tvTmc.setOnClickListener { view -> goToTmc() }
+        // binding.tvTmc.setOnClickListener { view -> goToTmc() }
 
     }
-
 
 
     /**
      * Call register api.
      */
     private fun callRegisterApi() {
-        var file : File?= null
+        var file: File? = null
         if (mCropImageUri != null) {
-             file = File(FileUtils.getPath(activity, mCropImageUri))
+            file = File(FileUtils.getPath(activity, mCropImageUri))
         }
 
 
         viewModel?.doRegister(
-                networkCall,
-                "2",
-                getString(binding.edtFname),
-                getString(binding.edtLName),
-                getString(binding.edtEmail),
-                getString(binding.edtPhone),
-                getString(binding.edtPassword),
-                "",
+            networkCall,
+            "2",
+            getString(binding.edtFname),
+            getString(binding.edtLName),
+            getString(binding.edtEmail),
+            getString(binding.edtPhone),
+            getString(binding.edtPassword),
+            "",
             "android",
             file
 
 
-        )?.observe(getViewLifecycleOwner(), Observer {
+        )?.observe(viewLifecycleOwner, Observer {
 
 //            replace(RegisterVerifyRequestFragment(),true,true)
 
 //            showSuccessBar(activity,it.message)
 //            Handler().postDelayed({  goBack() }, duration.toLong())
-            Util.showAlertBox(activity,it.message, DialogInterface.OnClickListener { dialog, which ->
-                dialog.dismiss()
-                goBack()
-            })
+            Util.showAlertBox(
+                activity,
+                it.message,
+                DialogInterface.OnClickListener { dialog, which ->
+                    dialog.dismiss()
+                    goBack()
+                })
 
         })
     }
@@ -198,7 +195,6 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
 
     private fun pickImage() {
         showImagePickerOptions()
-
 
 
     }
@@ -212,7 +208,7 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
             }
 
             override fun onTakeCameraSelected() {
-                callCameraIntent();
+                callCameraIntent()
             }
 //            fun onTakeCameraSelected() {
 //                callCameraIntent()
@@ -245,6 +241,7 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
             ImagePickerActivity.REQUEST_IMAGE_CAPTURE
         )
     }
+
     private fun callGallaryIntent() {
         val intent = Intent(activity, ImagePickerActivity::class.java)
         intent.putExtra(
@@ -288,21 +285,18 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
             binding.passwordView.setImageResource(R.drawable.ic_show_password)
         }
     }
-    override fun handleError(message: String?, tag: Int,  code: Int?) {
-        showErrorBar(getContext(), Util.nullCheck(message))
+
+    override fun handleError(message: String?, tag: Int, code: Int?) {
+        showErrorBar(context, Util.nullCheck(message))
     }
 
-
-    override fun onResume() {
-        super.onResume()
-    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == ImagePickerActivity.REQUEST_IMAGE_CAPTURE || requestCode == ImagePickerActivity.REQUEST_GALLERY_IMAGE  ) {
+        if (requestCode == ImagePickerActivity.REQUEST_IMAGE_CAPTURE || requestCode == ImagePickerActivity.REQUEST_GALLERY_IMAGE) {
 
-            if(resultCode == AppCompatActivity.RESULT_OK){
+            if (resultCode == AppCompatActivity.RESULT_OK) {
                 val uri = data!!.getParcelableExtra<Uri>("path")
                 try {
                     mCropImageUri = uri
@@ -321,6 +315,7 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
         }
 
     }
+
     private fun setUserImage(imageUri: Uri?) {
         if (imageUri != null) {
             Glide.with(activity!!)
@@ -333,10 +328,11 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>(), B
                 .load(imageUri).into(binding.user)
         }
     }
+
     companion object {
         /**
          * The constant RC_SIGN_IN.
          */
         private val RC_SIGN_IN = 43564
     }
-    }
+}

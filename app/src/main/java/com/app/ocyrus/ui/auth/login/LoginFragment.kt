@@ -163,7 +163,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
 
     private fun openForgotPasswordDialog(){
 //        bottomSheetReset
-        val bottomSheetForgotPassword = binding.fPass.bottomSheetForgotPassword as LinearLayout
+        val bottomSheetForgotPassword = binding.fPass.bottomSheetForgotPassword
         forgotPass =  BottomSheetBehavior.from(bottomSheetForgotPassword)
         forgotPass.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
@@ -196,14 +196,14 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
             if (forgotPass.state != BottomSheetBehavior.STATE_EXPANDED) {
                 forgotPass.state = BottomSheetBehavior.STATE_EXPANDED
             } else {
-                forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED;
+                forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED
             }
 
         })
 
         binding.fPass.bottomSheetForgotPassword.setOnClickListener({view ->
 
-            forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED;
+            forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED
         })
         binding.fPass.btnNext.setOnClickListener({
                 view ->
@@ -213,7 +213,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
     }
     private fun openOtpDialog(){
 //        bottomSheetReset
-        val bottomSheetForgotOtp = binding.fotp.bottomSheetOtp as LinearLayout
+        val bottomSheetForgotOtp = binding.fotp.bottomSheetOtp
         forgotOtp =  BottomSheetBehavior.from(bottomSheetForgotOtp)
         forgotOtp.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
@@ -258,7 +258,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
     }
     private fun openResetDialog(){
 //        bottomSheetReset
-        val bottomSheetForgotOtp = binding.fReset.bottomSheetResetPassword as LinearLayout
+        val bottomSheetForgotOtp = binding.fReset.bottomSheetResetPassword
         forgotReset =  BottomSheetBehavior.from(bottomSheetForgotOtp)
         forgotReset.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
@@ -387,7 +387,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
 //                showDialog(baseResponse.message, DialogInterface.OnClickListener { dialog, which ->
 //
 //                })
-                forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED;
+                forgotPass.state = BottomSheetBehavior.STATE_COLLAPSED
                 showSimpleDialog(baseResponse.message,true)
 
             } catch (e: Exception) {
@@ -499,7 +499,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
             val baseResponse = it as BaseResponse<Void>
             try {
 
-                forgotOtp.state = BottomSheetBehavior.STATE_COLLAPSED;
+                forgotOtp.state = BottomSheetBehavior.STATE_COLLAPSED
 
                 if(forgotReset.state != BottomSheetBehavior.STATE_EXPANDED){
                     forgotReset.state = BottomSheetBehavior.STATE_EXPANDED
@@ -541,9 +541,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
             val baseResponse = it as BaseResponse<Void>
             try {
 
-                forgotReset.state = BottomSheetBehavior.STATE_COLLAPSED;
+                forgotReset.state = BottomSheetBehavior.STATE_COLLAPSED
 
-               showSimpleDialog(baseResponse.message,false)
+                showSimpleDialog(baseResponse.message,false)
 
             } catch (e: Exception) {
             }
@@ -555,13 +555,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>, BaseNa
          */
         private val RC_SIGN_IN = 43564
     }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-    }
-
-
 
 
 }

@@ -2,32 +2,27 @@ package com.app.ocyrus.auth.login
 
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.NonNull
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.app.ocyrus.R
-import com.app.ocyrus.databinding.FragmentRegiseterRequestVerifyBinding
 import com.app.ocyrus.app.auth.login.RegisterVerifyRequestViewModel
 import com.app.ocyrus.base.BaseFragment
 import com.app.ocyrus.base.BaseNavigator
+import com.app.ocyrus.databinding.FragmentRegiseterRequestVerifyBinding
 
 /**
  * The type RegisterVerifyRequestFragment fragment.
  */
-class RegisterVerifyRequestFragment : BaseFragment<FragmentRegiseterRequestVerifyBinding, RegisterVerifyRequestViewModel>,
+class RegisterVerifyRequestFragment :
+    BaseFragment<FragmentRegiseterRequestVerifyBinding, RegisterVerifyRequestViewModel>,
     BaseNavigator {
-
-
 
 
     internal lateinit var binding: FragmentRegiseterRequestVerifyBinding
 
     internal var viewModel: RegisterVerifyRequestViewModel? = null
-
-
 
 
     override val layoutId: Int
@@ -63,26 +58,23 @@ class RegisterVerifyRequestFragment : BaseFragment<FragmentRegiseterRequestVerif
 
     private fun allWork() {
         binding.imgBack.setOnClickListener {
-            replace(LoginFragment(true),true,false)
+            replace(LoginFragment(true), true, false)
         }
 
 
         binding.btnGotoEmial.setOnClickListener {
-          // goBack()
-            replace(LoginFragment(true),true,false)
+            // goBack()
+            replace(LoginFragment(true), true, false)
         }
-
 
 
     }
 
     override fun handlingBackPressed(): Boolean {
 
-        replace(LoginFragment(true),true,false)
+        replace(LoginFragment(true), true, false)
         return true
     }
-
-
 
 
     /**
@@ -92,7 +84,7 @@ class RegisterVerifyRequestFragment : BaseFragment<FragmentRegiseterRequestVerif
 
     }
 
-    override fun handleError(message: String?, tag: Int,  code: Int?) {
+    override fun handleError(message: String?, tag: Int, code: Int?) {
         hideKeyboard()
         showErrorBar(context, message)
         //toast(message)
@@ -104,14 +96,6 @@ class RegisterVerifyRequestFragment : BaseFragment<FragmentRegiseterRequestVerif
          */
         private val RC_SIGN_IN = 43566584
     }
-
-
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-    }
-
 
 
 }

@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends PagerAdapter {
 
-    private Activity activity;
-    private ArrayList<DashbordResponse.Advertisement> data;
+    private final Activity activity;
+    private final ArrayList<DashbordResponse.Advertisement> data;
     private String[] namesArray;
 
     public CustomAdapter(Activity activity, ArrayList<DashbordResponse.Advertisement> data){

@@ -23,7 +23,7 @@ public class RippleViewCreator extends FrameLayout {
     /**
      * The Frame rate.
      */
-    private int frameRate = 15;
+    private final int frameRate = 15;
 
     /**
      * The Speed.
@@ -36,7 +36,7 @@ public class RippleViewCreator extends FrameLayout {
     /**
      * The Paint.
      */
-    private Paint paint = new Paint();
+    private final Paint paint = new Paint();
     /**
      * The End radius.
      */
@@ -60,7 +60,7 @@ public class RippleViewCreator extends FrameLayout {
     /**
      * The Handler.
      */
-    private Handler handler = new Handler();
+    private final Handler handler = new Handler();
     /**
      * The Touch action.
      */
