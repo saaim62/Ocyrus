@@ -1,0 +1,56 @@
+
+<resources>
+<string name="app_name">Ocyrus</string>
+<string name="app_name_with_camera_messgae">Ocyrus \nPlease select a image option</string>
+
+<string name="msg_session_expired">You are not authorized to access this account, please login again</string>
+<string name="room_screen_select_device">Select Device</string>
+<string name="ok">Ok</string>
+<string name="btn_cancel">Cancel</string>
+<string name="tryAgainlater">Try again later!</string>
+<string name="connection_failed">Connection Failed</string>
+<string name="please_check_your_internet_connection">Please Check Your Internet Connection.</string>
+<string name="enable_internet">Enable Internet</string>
+<string name="exit">Exit</string>
+<string name="error">Error</string>
+<string name="technical_error_msg">Sorry ! Something went wrong, please try again later.</string>
+<string name="forgot_your_password">Forgot Password?</string>
+<string name="login">Login</string>
+<string name="register_new_account">Don\'t have an account ?</string>
+<string name="sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_login_">Login with Email</string>
+<string name="register">Register</string>
+<string name="logout_msg">Do you want to logout ?</string>
+<string name="meet_chat"><![CDATA[Meet & Chat]]></string>
+<string name="meetings">Meetings</string>
+<string name="settings">Setting</string>
+<string name="start_mititng">Start a Meeting</string>
+<string name="join_mititng">Join Meeting</string>
+<string name="view_shedule">View schedule</string>
+<string name="reset">Reset</string>
+<string name="forgetStaticText">Enter your email address for verification process. We will send a 4 digits code on your email.</string>
+<string name="resetText">Set the new password for your account so you can login and access all feature.</string>
+<string name="otpText">Enter 4 digits code that you received on your email.</string>
+<string name="requestRegisterText">Please confirm your email\naddress by using the link\nin the emial we have sent you.</string>
+
+<string name="error_retrieving_access_token">Error retrieving token</string>
+<string name="permissions_needed">Camera and Microphone permissions needed. Please allow in App Settings for additional functionality.</string>
+<string name="tmcclick"><![CDATA[Term & Condition]]></string>
+<string name="privacyPolicy">Privacy Policy</string>
+<string name="no_meetings_found">No meetings found</string>
+<string name="search_hint">Search</string>
+<string name="close">Close</string>
+<string name="enter_room_id">Enter Room ID</string>
+<string name="pin_to_enter">PIN to Enter</string>
+<string name="join">JOIN</string>
+<string name="join_option">JOIN OPTION</string>
+<string name="turn_off_video">Turn Off Video</string>
+<string name="don_t_connect_to_audio">Don\'t Connect to audio</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="you_earn_money_everytime_n_the_ad_change">You earn money everytime \n the Ad change</string>
+
+
+</resources>

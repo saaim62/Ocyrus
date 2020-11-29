@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2D597A</color>
+    <color name="colorPrimaryDark">#2D597A</color>
+    <color name="colorAccent">#2D597A</color>
+    <color name="colorWindowBackground">#FFFFFF</color>
+
+    <color name="colorEchoBlue">#ADB8CB</color>
+    <color name="colorHintGray">#b8babe</color>
+    <color name="colorBgJoinButton">#E6E5EB</color>
+    <color name="colorBgJoinButtonlight">#80E6E5EB</color>
+    <color name="colorCaribbeanGreen">#01C293</color>
+    <color name="colorCaribbeanGreenPress">#8001C293</color>
+    <color name="colorShimmerViewBackground">#dddddd</color>
+    <color name="grey_transparent_50">#50606060</color>
+    <color name="black_transparent_50">#50000000</color>
+    <!--    Bottom Navigation colors-->
+    <color name="colorBottomNavSelected">#4e4e4e</color>
+    <color name="colorBottomNavDefault">#a1a1a1</color>
+
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="light_black">#313131</color>
+    <color name="light_brown">#313131</color>
+    <color name="ultra_light_black">#4e4e4e</color>
+    <color name="dot_light_screen1">#a1a1a1</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="colorPumpkin">#F68121</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_color">#FFF4EE</color>
+    <color name="black">#000000</color>
+    <color name="red">#D00D0D</color>
+    <color name="app_red">#f66e24</color>
+    <color name="grey">#AAACBA</color>
+    <color name="green">#45D100</color>
+    <color name="white_green">#A9FF80</color>
+    <color name="grey_light">#dedede</color>
+    <color name="tab_grey">#ababab</color>
+    <color name="tab_red">#d90000</color>
+    <color name="dark_grey">#58595B</color>
+
+    <color name="gray">#777777</color>
+    <color name="app_green">#1CC43A</color>
+    <color name="bg_color">#f7f7f7</color>
+
+    <color name="black_effective">#111111</color>
+    <color name="tv_text_color">#777777</color>
+
+    <color name="translucent_white">#88ffffff</color>
+
+    <!-- Others -->
+
+
+    <color name="app_yellow">#f9e725</color>
+    <color name="app_orange">#F88018</color>
+    <color name="app_purpal">#621D66</color>
+
+    <color name="hint_color">#adb8b0</color>
+    <color name="divider_color">#c8c8c8</color>
+    <color name="home_divider_color">#f1f1f1</color>
+
+    <color name="app_blue">#621D66</color>
+    <color name="inactive_color">#adadad</color>
+    <color name="demo_dark_transparent">#24000000</color>
+    <color name="filter_unselected_color">#f4f4f4</color>
+    <color name="intro_text_color">#f98255</color>
+
+    <color name="card_color_main">#FDF3D1</color>
+
+    <color name="gold">#FFD700</color>
+    <color name="selected_text_color">#621D66</color>
+    <color name="divider_light">#f2f2f2</color>
+    <color name="default_color">#9b9b9b</color>
+    <color name="caption_color">#7c7470</color>
+    <color name="tab_color">#48b39b</color>
+    <color name="chart_color">#0d9140</color>
+
+    <color name="colorTextGreyish">#868586</color>
+
+    <color name="colorPurpleLight">#822088</color>
+    <color name="colorPurpleDark">#36002D</color>
+    <color name="colorBackgroundLightGrey">#F3F2F8</color>
+
+    <color name="colorTextParrot">#5D7929</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextLightOne">#70000000</color>
+    <color name="colorTextLightTwo">#80000000</color>
+
+
+    <!--    order status colors-->
+    <!--    1="Pending" 2="canceled" 3=>"delivered" 4 => "declined due to payment fail" 5=>"accepted"-->
+    <color name="colorOrderStatusPending">#f67733</color>
+    <color name="colorOrderStatusCanceled">#FF0000</color>
+    <color name="colorOrderStatusDelivered">#5E7726</color>
+    <color name="colorOrderStatusAccepted">#621D66</color>
+    <color name="colorOrderStatusDeclinedFailedPay">#FF0000</color>
+
+
+
+
+
+
+
+    /*************************** paritosh ****************/
+
+    <color name="graycolor">#51545B</color>
+    <color name="pageBg">#F3F2F8</color>
+    <color name="buttonBg">#2D597A</color>
+
+</resources>

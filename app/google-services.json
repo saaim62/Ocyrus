@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "447472933293",
+    "firebase_url": "https://ocyrus-d721d.firebaseio.com",
+    "project_id": "ocyrus-d721d",
+    "storage_bucket": "ocyrus-d721d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447472933293:android:1236b7625091c2891ee924",
+        "android_client_info": {
+          "package_name": "com.app.ocyrus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447472933293-gt3qmqgjd06jrkbve2aeho15qm5758qh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.ocyrus",
+            "certificate_hash": "493fe931216e459974805f690cab3a95dc4a3bf1"
+          }
+        },
+        {
+          "client_id": "447472933293-vlo4rj96ss9uvbnghsf2uj5ama6qu5kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVlKaXmk3ciDsjExQwbsX8rF9LAKJA3q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447472933293-vlo4rj96ss9uvbnghsf2uj5ama6qu5kb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
